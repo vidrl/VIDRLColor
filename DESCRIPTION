@@ -1,0 +1,18 @@
+Package: VIDRLColor
+Type: Package
+Title: Distinct Colors for VIDRL Report
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Josh", "Zhang",
+      email = "josh.zhang@mh.org.au",
+      role = c("aut", "cre")
+    )
+  )
+Description: Solving the problem that color is not consistent when making plots for outbreak report
+License: No License
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    dplyr,
+    randomcoloR
