@@ -45,8 +45,8 @@ assign_variable_colors <- function(vars, palette_func = distinctColorPalette) {
   color_map <- setNames(colors, unique_vars)
   return(color_map[vars])
 }
-add_Colors <- function(samples, section){
-  color_list <- load_Colors()
+add_Colors <- function(samples, section, color_list=load_Colors()){
+  #color_list <- load_Colors()
   #print(color_list)
   new_color_list <- assign_variable_colors(samples)
   section_list <- color_list[[section]]
@@ -66,16 +66,5 @@ Get_Color_list <- function(section){
   return(c(color_list[["fix"]], color_list[[section]]))
 }
 
-#color_list <- add_Colors(c("A","B","C","D"), "test")
 
-#print_Colors(color_list, "fix")
-
-
-#color_new <- Get_Color_list("test")
-#print(color_new)
-## test section
-#color_list <- initial_Colors()
-#color_list
-#print_Colors(color_list, "fix")
-#save_Colors(color_list, "VIDRLColor.rds")
 
