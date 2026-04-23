@@ -9,5 +9,11 @@
     "WA": ["#6A00FF"],
     "Unknown": ["#FFF8DC"],
     "International": ["#FFF5EE"]
+  },
+  "test": {
+    "A": ["#B6DB74"],
+    "B": ["#B763D1"],
+    "C": ["#A1D1D2"],
+    "D": ["#D996A2"]
   }
 }

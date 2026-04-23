@@ -26,37 +26,54 @@ save_Colors <- function(color_list, filename="VIDRLColor.json"){
 print_Colors <- function(color_list, section){
   colors <- color_list[[section]]
   for (nm in names(colors)){
-    cat(paste('"', nm, '"', "=", '"', colors[nm], '"\n', sep=""))
+    cat(paste('"', nm, '"', "=", '"', colors[[nm]], '"\n', sep=""))
   }
 }
 
 load_Colors <- function(){
-  url <- "https://github.com/vidrl/VIDRLColor/blob/main/VIDRLColor.json"
-  #download.file(url, destfile="tmp.rds", mode="w")
+  url <- "https://raw.githubusercontent.com/vidrl/VIDRLColor/main/VIDRLColor.json"
+  #download.file(url, destfile="tmp.json", mode="w")
   #color_list <- readRDS(url("https://github.com/vidrl/VIDRLColor/blob/main/VIDRLColor.rds",method = "libcurl"))
   #rm tmp
   color_list <- fromJSON(url)
   return(color_list)
 }
 
+assign_variable_colors <- function(vars, palette_func = distinctColorPalette) {
+  unique_vars <- unique(vars)
+  colors <- palette_func(length(unique_vars))
+  color_map <- setNames(colors, unique_vars)
+  return(color_map[vars])
+}
 add_Colors <- function(samples, section){
   color_list <- load_Colors()
+  #print(color_list)
+  new_color_list <- assign_variable_colors(samples)
+  section_list <- color_list[[section]]
+  for (nm in names(new_color_list)){
+    if (!(nm %in% names(section_list))){
+      section_list[[nm]] <- new_color_list[[nm]]
+    }
+  }
+  print(section_list)
+  color_list[[section]] <- section_list
+  #print(color_list)
+  return(color_list)
 }
 
+Get_Color_list <- function(section){
+  color_list <- load_Colors()
+  return(c(color_list[["fix"]], color_list[[section]]))
+}
+
+color_list <- add_Colors(c("A","B","C","D"), "test")
+
+print_Colors(color_list, "fix")
+
+save_Colors(color_list)
 ## test section
 #color_list <- initial_Colors()
 #color_list
 #print_Colors(color_list, "fix")
 #save_Colors(color_list, "VIDRLColor.rds")
 
-color_list <- load_Colors()
-
-color_list <- initial_Colors()
-json_color <- toJSON(color_list)
-
-save_Colors(color_list)
-
-data <- fromJSON("VIDRLColor.json")
-
-data[["fix"]][["VIC"]][]
-color_list[["fix"]][["VIC"]]
