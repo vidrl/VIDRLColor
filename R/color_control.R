@@ -45,8 +45,8 @@ assign_variable_colors <- function(vars, palette_func = distinctColorPalette) {
   color_map <- setNames(colors, unique_vars)
   return(color_map[vars])
 }
-add_Colors <- function(samples, section, color_list=load_Colors()){
-  #color_list <- load_Colors()
+add_Colors <- function(samples, section){
+  color_list <- load_Colors()
   #print(color_list)
   new_color_list <- assign_variable_colors(samples)
   section_list <- color_list[[section]]
