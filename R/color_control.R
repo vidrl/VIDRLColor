@@ -66,11 +66,13 @@ Get_Color_list <- function(section){
   return(c(color_list[["fix"]], color_list[[section]]))
 }
 
-color_list <- add_Colors(c("A","B","C","D"), "test")
+#color_list <- add_Colors(c("A","B","C","D"), "test")
 
-print_Colors(color_list, "fix")
+#print_Colors(color_list, "fix")
 
-save_Colors(color_list)
+
+#color_new <- Get_Color_list("test")
+#print(color_new)
 ## test section
 #color_list <- initial_Colors()
 #color_list
