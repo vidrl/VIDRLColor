@@ -1,10 +1,10 @@
 library(dplyr)
 library(randomcoloR)
-
+library(jsonlite)
 
 initial_Colors <- function(){
   color_list <- list()
-  fix_colors <- c("VIC"   = "#1F77B4",
+  fix_colors <- list("VIC"   = "#1F77B4",
                     "NT" = "#FF7F0E",
                     "QLD" = "#2CA02C",
                     "SA"   = "#D62728",
@@ -17,8 +17,10 @@ initial_Colors <- function(){
   return(color_list)
 }
 
-save_Colors <- function(color_list, filename){
-  save(color_list, file=filename)
+save_Colors <- function(color_list, filename="VIDRLColor.json"){
+  #saveRDS(color_list, file=filename)
+  #json_color <- toJSON(color_list)
+  write_json(color_list, filename, pretty=TRUE)
 }
 
 print_Colors <- function(color_list, section){
@@ -28,14 +30,33 @@ print_Colors <- function(color_list, section){
   }
 }
 
-load_Colors
+load_Colors <- function(){
+  url <- "https://github.com/vidrl/VIDRLColor/blob/main/VIDRLColor.json"
+  #download.file(url, destfile="tmp.rds", mode="w")
+  #color_list <- readRDS(url("https://github.com/vidrl/VIDRLColor/blob/main/VIDRLColor.rds",method = "libcurl"))
+  #rm tmp
+  color_list <- fromJSON(url)
+  return(color_list)
+}
 
 add_Colors <- function(samples, section){
   color_list <- load_Colors()
 }
 
 ## test section
+#color_list <- initial_Colors()
+#color_list
+#print_Colors(color_list, "fix")
+#save_Colors(color_list, "VIDRLColor.rds")
+
+color_list <- load_Colors()
+
 color_list <- initial_Colors()
-color_list
-print_Colors(color_list, "fix")
-save_Colors(color_list, "VIDRLColor.Rdata")
+json_color <- toJSON(color_list)
+
+save_Colors(color_list)
+
+data <- fromJSON("VIDRLColor.json")
+
+data[["fix"]][["VIC"]][]
+color_list[["fix"]][["VIC"]]

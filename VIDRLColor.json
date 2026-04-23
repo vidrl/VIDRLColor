@@ -1,0 +1,13 @@
+{
+  "fix": {
+    "VIC": ["#1F77B4"],
+    "NT": ["#FF7F0E"],
+    "QLD": ["#2CA02C"],
+    "SA": ["#D62728"],
+    "TAS": ["#9467BD"],
+    "NSW": ["#FFD700"],
+    "WA": ["#6A00FF"],
+    "Unknown": ["#FFF8DC"],
+    "International": ["#FFF5EE"]
+  }
+}

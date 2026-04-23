@@ -15,4 +15,5 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
     dplyr,
+    jsonlite,
     randomcoloR
