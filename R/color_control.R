@@ -55,7 +55,7 @@ add_Colors <- function(samples, section){
       section_list[[nm]] <- new_color_list[[nm]]
     }
   }
-  print(section_list)
+  #print(section_list)
   color_list[[section]] <- section_list
   #print(color_list)
   return(color_list)

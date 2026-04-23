@@ -15,5 +15,19 @@
     "B": ["#B763D1"],
     "C": ["#A1D1D2"],
     "D": ["#D996A2"]
+  },
+  "measles": {
+    "Vietnam": ["#7FE0D6"],
+    "Morocco": ["#D6CE8A"],
+    "Australia": ["#7EE15C"],
+    "Philippines": ["#9278D2"],
+    "Indonesia": ["#D7AACE"],
+    "England": ["#BD47DE"],
+    "New Zealand": ["#D5D4C8"],
+    "Pakistan": ["#DD8063"],
+    "Thailand": ["#DC62A5"],
+    "Afghanistan": ["#80B2D6"],
+    "Overseas - Country unknown": ["#91DD9C"],
+    "South Africa": ["#DBDE53"]
   }
 }
