@@ -4,7 +4,7 @@ library(jsonlite)
 
 initial_Colors <- function(){
   color_list <- list()
-  fix_colors <- list("VIC"   = "#1F77B4",
+  fix_colors <- list("VIC"   = "#00CCFF",
                     "NT" = "#FF7F0E",
                     "QLD" = "#2CA02C",
                     "SA"   = "#D62728",

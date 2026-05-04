@@ -1,7 +1,7 @@
 Package: VIDRLColor
 Type: Package
 Title: Distinct Colors for VIDRL Report
-Version: 0.1.2
+Version: 0.1.3
 Authors@R: c(
     person(
       "Josh", "Zhang",
