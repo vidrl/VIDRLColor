@@ -1,14 +1,14 @@
 {
   "fix": {
-    "VIC": ["#53C9F1"],
-    "NT": ["#C45727"],
-    "QLD": ["#52BE96"],
-    "SA": ["#9F1D20"],
-    "TAS": ["#FFD133"],
-    "NSW": ["#1E4496"],
-    "WA": ["#B7C6D6"],
+    "VIC": ["#00CCFF"],
+    "NT": ["#FF7F0E"],
+    "QLD": ["#2CA02C"],
+    "SA": ["#D62728"],
+    "TAS": ["#9467BD"],
+    "NSW": ["#FFD700"],
+    "WA": ["#6A00FF"],
     "Unknown": ["#FFF8DC"],
-    "International": ["#003936"]
+    "International": ["#FFF5EE"]
   },
   "test": {
     "A": ["#B6DB74"],
