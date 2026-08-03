@@ -97,6 +97,12 @@
     "10463": ["#6A9962"],
     "8515": ["#83C2E6"],
     "11040": ["#D4DEE0"],
-    "11371": ["#8697DE"]
+    "11371": ["#8697DE"],
+    "Bangladesh": ["#8C93D9"],
+    "Japan": ["#DF77BC"],
+    "India": ["#D37856"],
+    "Sri Lanka": ["#AF4BDF"],
+    "India/Singapore": ["#82E653"],
+    "Malaysia/Bangladesh": ["#7DDCC1"]
   }
 }
